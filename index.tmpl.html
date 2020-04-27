@@ -11,7 +11,7 @@
 
     <hr>
 
-    <test v-for="s in sub" v-bind:todo="s"></test>
+    <food-label :key="index" v-for="(food,index) in foods" v-bind:food="food"></food-label>
 </div>
 </body>
 </html>

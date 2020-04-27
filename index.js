@@ -1,13 +1,13 @@
 import Vue from 'vue'
-import test from './src/components/test.vue'
+import FoodLabel from '@/components/food-label.vue'
 
 new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!',
-        sub: [1,2,3]
+        foods: ['apple', 'pear', 'orange']
     },
     components: {
-        test
+        FoodLabel
     }
 })
