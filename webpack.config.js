@@ -21,7 +21,11 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                use: 'vue-loader' // use 或 loader
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'] // loader 顺序不能变
             }
         ]
     },

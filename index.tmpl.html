@@ -9,9 +9,15 @@
     {{ message }}
     <input v-model="message">
 
-    <hr>
+    <hr/>
+    <button @click="dispatch" :disabled="foods">发水果，只能发一次</button>
+    <div v-if="!foods">有三个</div>
+    <div v-else>发完了</div>
+    <hr/>
 
-    <food-label :key="index" v-for="(food,index) in foods" v-bind:food="food"></food-label>
+    <food-label :key="index" v-for="(food,index) in foods" v-bind:index="index" v-bind:food="food" v-on:eat-food="printEat"></food-label>
+
+    <div ></div>
 </div>
 </body>
 </html>
