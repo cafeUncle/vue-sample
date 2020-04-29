@@ -10,7 +10,7 @@ module.exports = {
         path: __dirname + "/dist", //打包后的文件存放的地方
         filename: '[name]-[hash].js' //打包后输出文件的文件名  [name] = chunk的名称
     },
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     devServer: {
         contentBase: './dist',  //  本地服务器所加载的页面所在的目录
         historyApiFallback: true, // 不跳转
